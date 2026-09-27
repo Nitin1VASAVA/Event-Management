@@ -1,0 +1,85 @@
+.footer {
+    width: 100%;
+    background-color: #222222;
+    color: #ffffff;
+}
+
+
+/* Footer Content */
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    padding: 55px 25px 25px;
+
+    text-align: center;
+}
+
+
+/* Logo */
+
+.footer-content h3 {
+    font-size: 23px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+.footer-content h3 span {
+    color: #d4a017;
+}
+
+
+/* Description */
+
+.footer-content > p {
+    color: #aaaaaa;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* Line */
+
+.footer-line {
+    width: 100%;
+    height: 1px;
+
+    background-color: #3a3a3a;
+
+    margin-bottom: 20px;
+}
+
+
+/* Copyright */
+
+.footer-content .copyright {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .footer-content {
+        padding: 45px 20px 20px;
+    }
+
+    .footer-content h3 {
+        font-size: 21px;
+    }
+
+    .footer-content > p {
+        font-size: 13px;
+    }
+
+}

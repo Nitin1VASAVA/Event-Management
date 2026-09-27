@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 300px;
+  height: 100vh;
+
+  background: #222222;
+
+  padding: 55px 25px 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  margin: 0 0 75px 15px;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: white;
+
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #d99400;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 42px;
+
+  margin-left: 15px;
+}
+
+.sidebar-menu a {
+  color: #dddddd;
+
+  text-decoration: none;
+
+  font-size: 23px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  transition: 0.2s;
+}
+
+.sidebar-menu a:hover {
+  color: #d99400;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout-btn {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 17px 20px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #bd7600;
+
+  color: white;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: #d99400;
+}
+
+.link{
+    text-decoration: none;
+    /* list-style: none; */
+
+}

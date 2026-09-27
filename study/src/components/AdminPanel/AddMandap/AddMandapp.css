@@ -1,0 +1,162 @@
+
+/* Main Page */
+.mandap-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #fff7f9, #f7f3ff);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Form Card */
+.mandap-form {
+  width: 100%;
+  max-width: 650px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(70, 40, 80, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Heading */
+.form-title {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #3b2635;
+  position: relative;
+}
+
+.form-title::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #d94670, #8b5cf6);
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a3943;
+}
+
+/* Inputs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #ddd5dc;
+  border-radius: 10px;
+  background: #fff;
+  color: #332832;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa;
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c83d68;
+  box-shadow: 0 0 0 3px rgba(200, 61, 104, 0.1);
+}
+
+/* Textarea */
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* Select */
+.form-group select {
+  cursor: pointer;
+}
+
+/* File Input */
+.form-group input[type="file"] {
+  padding: 10px;
+  cursor: pointer;
+  background: #faf8fa;
+}
+
+.form-group input[type="file"]::file-selector-button {
+  border: none;
+  padding: 9px 14px;
+  margin-right: 10px;
+  border-radius: 7px;
+  background: #f3e8ee;
+  color: #a72f58;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+  background: #ead6df;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #d94670, #a8325b);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 7px 18px rgba(169, 50, 91, 0.22);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(169, 50, 91, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .mandap-container {
+    padding: 25px 15px;
+  }
+
+  .mandap-form {
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+}
+

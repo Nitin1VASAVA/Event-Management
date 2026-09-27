@@ -1,0 +1,235 @@
+.register-page {
+    min-height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f8f7f4;
+
+    padding: 50px 20px;
+}
+
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.register-card {
+    width: 100%;
+    max-width: 450px;
+
+    background-color: #ffffff;
+
+    padding: 40px;
+
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.register-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.register-header h1 {
+    font-size: 30px;
+
+    color: #222222;
+
+    margin-bottom: 8px;
+}
+
+.register-header p {
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #333333;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #a16207;
+
+    box-shadow: 0 0 0 2px rgba(161, 98, 7, 0.08);
+}
+
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.register-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #a16207;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #854d0e;
+}
+
+
+/* =========================
+   OTP SECTION
+========================= */
+
+.otp-section {
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.otp-title {
+    text-align: center;
+
+    margin-bottom: 18px;
+}
+
+.otp-title h3 {
+    color: #222222;
+
+    font-size: 19px;
+
+    margin-bottom: 7px;
+}
+
+.otp-title p {
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* OTP Input */
+
+.otp-input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    text-align: center;
+    letter-spacing: 4px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.otp-input:focus {
+    border-color: #a16207;
+
+    box-shadow: 0 0 0 2px rgba(161, 98, 7, 0.08);
+}
+
+
+/* Verify Button */
+
+.verify-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #222222;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.verify-btn:hover {
+    background-color: #333333;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .register-page {
+        padding: 35px 15px;
+    }
+
+    .register-card {
+        padding: 30px 22px;
+    }
+
+    .register-header h1 {
+        font-size: 26px;
+    }
+
+}

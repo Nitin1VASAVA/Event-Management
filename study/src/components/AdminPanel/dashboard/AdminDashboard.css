@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-layout {
+  min-height: 100vh;
+
+  background: #f6f7f9;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.dashboard-main {
+  margin-left: 300px;
+
+  width: calc(100% - 300px);
+
+  min-height: 100vh;
+
+  padding: 35px 45px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+
+  font-size: 38px;
+
+  color: #222;
+}
+
+.dashboard-header p {
+  margin: 8px 0 0;
+
+  font-size: 17px;
+
+  color: #777;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.dashboard-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+
+  margin-bottom: 35px;
+}
+
+
+.dashboard-card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e5e5;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.dashboard-card h3 {
+  margin: 0 0 15px;
+
+  color: #666;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+.dashboard-card h2 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 35px;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-section {
+  background: white;
+
+  padding: 28px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e5e5;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.quick-section h2 {
+  margin: 0 0 22px;
+
+  font-size: 24px;
+
+  color: #222;
+}
+
+
+.quick-actions {
+  display: flex;
+
+  gap: 15px;
+}
+
+
+.quick-actions button {
+  border: none;
+
+  background: #bd7600;
+
+  color: white;
+
+  padding: 13px 22px;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.quick-actions button:hover {
+  background: #d99400;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .dashboard-main {
+    margin-left: 260px;
+
+    width: calc(100% - 260px);
+
+    padding: 25px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .dashboard-main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 30px;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+  }
+
+  .quick-actions button {
+    width: 100%;
+  }
+}
