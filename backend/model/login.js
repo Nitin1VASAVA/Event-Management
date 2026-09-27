@@ -1,8 +1,15 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+// const { loginUser } = require("../controllers/registrationController");
 
-const userSchema = new mongoose.Schema({
-    email:String,
-    password:String
+const loginSchema = mongoose.Schema({
+    email:{
+        type: String,
+        require: true
+    },
+    password:{
+        type:String,
+        require:true
+    }
 })
-const userModel = mongoose.model("Login",userSchema)
-module.exports = userModel
+const LoginUser = mongoose.model("loginData",loginSchema);
+module.exports = LoginUser

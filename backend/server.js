@@ -1,44 +1,76 @@
 const express = require("express");
-const cors = require("cors")
-const connectDB = require("./db/db")
-const Users = require("./model/login")
+const mongoose = require("mongoose");
+const model = require("../backend/model/AdminAddMandapModel");
+const cors = require("cors");
+
+//model
+require("dotenv").config();
+
 const app = express();
 
+const loginRoute = require("./routes/loginRoute");
+const userRoutes = require("./routes/userRoutes");
+
+//Admin Route
+const AdminAddMandapRoute = require("./routes/AdminAddMandapRoute");
+
+//User Routes
+const UserGetMandapRoute = require("./routes/UserGetMandapRoute");
+
+//get mandap by id
+const GetMandapById = require("./routes/GetMandapByIdRoute");
+
+//manage mandap
+const ManageMandapRoute = require("./routes/ManageMandapRoute");
+
+//image actual me frontend me bhejne ke liye
+app.use("/uploads", express.static("uploads"));
+
+// Middleware
+app.use(cors());
 app.use(express.json());
-app.use(cors())
-connectDB()
-app.get("/",(req,res)=>{
-    res.send("this is demo")
-})
 
-app.post("/login",(req,res)=>{
-    try {
-        const user = new Users({
-            email:req.body.email,
-            password:req.body.password
-        })
-        user.save()
-        res.send("successfull")
-    } catch (error) {
-        console.log("error")
-    }
-})
+// User routes
+app.use("/api", userRoutes);
 
-app.get("/api/user", async (req, res) => {
-    try {
+// Login / Register routes
+app.use("/api", loginRoute);
 
-        const demo = await Users.find();
+app.use("/api", AdminAddMandapRoute);
 
-        res.json(demo);
+app.use("/api", GetMandapById);
 
-    } catch (error) {
+//user
+app.use("/api", UserGetMandapRoute);
 
-        console.log(error);
-        res.status(500).json({
-            message: "Server error"
-        });
+app.use("/api", ManageMandapRoute);
 
-    }
+// Admin test route
+app.get("/api/admin/test", (req, res) => {
+  res.send("Admin route working");
 });
 
-app.listen(8080);
+app.delete("/api/ManageMandap/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const deletedMandap = await model.findByIdAndDelete(id);
+    res.status(200).json({ message: "successfully delete",data:deletedMandap});
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+// MongoDB
+mongoose
+  .connect("mongodb://localhost:27017/login_db")
+  .then(() => {
+    console.log("MongoDB connected");
+  })
+  .catch((error) => {
+    console.log("MongoDB error:", error);
+  });
+
+// Server
+app.listen(8080, () => {
+  console.log("Server running on 8080");
+});
