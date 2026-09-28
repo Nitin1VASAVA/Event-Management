@@ -15,7 +15,7 @@ import Sidebar from "./components/AdminPanel/Sidebar/Sidebar";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Event-Management">
       {/* <Header /> */}
 
       <Routes>
