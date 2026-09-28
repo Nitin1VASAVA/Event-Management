@@ -1,10 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const model = require("../backend/model/AdminAddMandapModel");
 const cors = require("cors");
 
 //model
-require("dotenv").config();
 
 const app = express();
 
@@ -60,11 +60,12 @@ app.delete("/api/ManageMandap/:id", async (req, res) => {
   }
 });
 
-// MongoDB
+console.log("MONGO_URI =", process.env.MONGO_URI);
+
 mongoose
-  .connect("mongodb://localhost:27017/login_db")
+  .connect(process.env.MONGO_URI)
   .then(() => {
-    console.log("MongoDB connected");
+    console.log("MongoDB Atlas connected");
   })
   .catch((error) => {
     console.log("MongoDB error:", error);
