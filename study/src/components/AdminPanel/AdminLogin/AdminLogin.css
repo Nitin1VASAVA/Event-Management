@@ -1,117 +1,99 @@
+/* Admin Login Page */
 .admin-login-page {
     min-height: 100vh;
-
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    background-color: #f7f7f7;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
+    padding: 20px;
 }
 
-
+/* Login Box */
 .admin-login-box {
-    width: 400px;
-
-    background-color: white;
-
+    width: 100%;
+    max-width: 420px;
+    background-color: #ffffff;
     padding: 40px;
-
-    border-radius: 10px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-
+/* Heading */
 .admin-login-box h1 {
+    margin: 0 0 10px;
     text-align: center;
-
-    margin-bottom: 10px;
-
+    font-size: 30px;
     color: #222;
 }
 
-
+/* Description */
 .admin-login-text {
     text-align: center;
-
     color: #777;
-
     font-size: 14px;
-
     margin-bottom: 30px;
 }
 
-
+/* Input Group */
 .admin-input-group {
     margin-bottom: 20px;
 }
 
-
 .admin-input-group label {
     display: block;
-
-    margin-bottom: 7px;
-
-    color: #333;
-
+    margin-bottom: 8px;
     font-size: 14px;
-
-    font-weight: 500;
+    font-weight: 600;
+    color: #333;
 }
 
-
+/* Input */
 .admin-input-group input {
     width: 100%;
-
-    box-sizing: border-box;
-
-    padding: 12px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 5px;
-
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
     outline: none;
-
-    font-size: 14px;
+    box-sizing: border-box;
+    transition: 0.3s;
 }
-
 
 .admin-input-group input:focus {
-    border-color: #a16207;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
-
-.admin-login-btn {
+/* Login Button */
+.admin-login-box button {
     width: 100%;
-
-    padding: 12px;
-
+    padding: 13px;
+    margin-top: 5px;
     border: none;
-
-    border-radius: 5px;
-
-    background-color: #a16207;
-
+    border-radius: 7px;
+    background-color: #4f46e5;
     color: white;
-
-    font-size: 15px;
-
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-
-.admin-login-btn:hover {
-    background-color: #854d0e;
+.admin-login-box button:hover {
+    background-color: #3730a3;
 }
 
-
-@media (max-width: 500px) {
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .admin-login-page {
+        padding: 15px;
+    }
 
     .admin-login-box {
-        width: 90%;
-
         padding: 30px 20px;
     }
 
+    .admin-login-box h1 {
+        font-size: 26px;
+    }
 }

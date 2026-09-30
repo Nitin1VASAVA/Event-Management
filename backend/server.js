@@ -50,6 +50,9 @@ app.get("/api/admin/test", (req, res) => {
   res.send("Admin route working");
 });
 
+
+
+//delete mandap
 app.delete("/api/ManageMandap/:id", async (req, res) => {
   try {
     const id = req.params.id;

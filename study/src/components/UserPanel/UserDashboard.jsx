@@ -6,30 +6,11 @@ import "./UserDashboard.css";
 
 function UserDashboard() {
 
-  // =====================================
-  // MANDAP DATA
-  // =====================================
-
   const [mandaps, setMandaps] = useState([]);
-
-
-  // =====================================
-  // PROFILE SHOW / HIDE
-  // =====================================
 
   const [showProfile, setshowProfile] = useState(false);
 
-
-  // =====================================
-  // USER DATA
-  // =====================================
-
   const [user, setUser] = useState(null);
-
-
-  // =====================================
-  // GET USER EMAIL
-  // =====================================
 
   useEffect(() => {
 
@@ -42,11 +23,6 @@ function UserDashboard() {
     });
 
   }, []);
-
-
-  // =====================================
-  // GET MANDAP DATA
-  // =====================================
 
   useEffect(() => {
 
@@ -69,19 +45,9 @@ function UserDashboard() {
 
   }, []);
 
-
-  // =====================================
-  // JSX
-  // =====================================
-
   return (
 
     <div className="dashboard-container">
-
-
-      {/* =================================
-          PROFILE BUTTON
-      ================================= */}
 
       <button
         className="profile-button"
@@ -95,10 +61,6 @@ function UserDashboard() {
 
       </button>
 
-
-      {/* =================================
-          PROFILE
-      ================================= */}
 
       {showProfile && user && (
 
@@ -115,10 +77,6 @@ function UserDashboard() {
       )}
 
 
-      {/* =================================
-          PAGE HEADING
-      ================================= */}
-
       <div className="dashboard-heading">
 
         <h1>
@@ -131,11 +89,6 @@ function UserDashboard() {
 
       </div>
 
-
-      {/* =================================
-          MANDAP GRID
-      ================================= */}
-
       <div className="mandap-grid">
 
 
@@ -146,10 +99,6 @@ function UserDashboard() {
             key={mandap._id}
           >
 
-
-            {/* =================================
-                IMAGE GALLERY
-            ================================= */}
 
             <div className="mandap-images">
 
@@ -177,38 +126,25 @@ function UserDashboard() {
 
             </div>
 
-
-            {/* =================================
-                MANDAP CONTENT
-            ================================= */}
-
             <div className="mandap-content">
 
 
-              {/* NAME */}
 
               <h2 className="mandap-name">
                 {mandap.name}
               </h2>
 
 
-              {/* TYPE */}
 
               <span className="mandap-type">
                 {mandap.mandaptype}
               </span>
 
 
-              {/* DESCRIPTION */}
 
               <p className="mandap-description">
                 {mandap.description}
               </p>
-
-
-              {/* =================================
-                  PRICE
-              ================================= */}
 
               <div className="mandap-bottom">
 
